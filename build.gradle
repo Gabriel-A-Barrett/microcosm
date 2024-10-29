@@ -1,0 +1,7 @@
+plugins {
+    id 'application'
+}
+
+application {
+    mainClassName = 'app.App' // Replace with the actual fully-qualified name of your main class
+}
