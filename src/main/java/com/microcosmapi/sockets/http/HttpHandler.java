@@ -6,8 +6,10 @@ import sockets.pojos.HttpResponse;
 import sockets.writers.ResponseWriter;
 
 import java.io.*;
+import java.net.URI;
 import java.util.Map;
 import java.util.Optional;
+
 
 public class HttpHandler {
 
@@ -23,6 +25,8 @@ public class HttpHandler {
          * Decode http request
          */
         Optional<HttpRequest> request = HttpDecoder.decode(inputStream);
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 
         /*
          * point to the correct RequestRunner

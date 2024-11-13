@@ -1,8 +1,8 @@
 package sockets;
 
-import Sockets.contract.HttpMethod;
-import Sockets.contract.RequestRunner;
-import Sockets.http.HttpHandler;
+import sockets.contract.HttpMethod;
+import sockets.contract.RequestRunner;
+import sockets.http.HttpHandler;
 
 import java.io.IOException;
 import java.net.ServerSocket;

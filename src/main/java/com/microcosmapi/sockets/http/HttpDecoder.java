@@ -41,7 +41,7 @@ public class HttpDecoder {
         try {
             Builder requestBuilder = new Builder();
             // Using enum to extract HTTP method
-            requestBuilder.setHttpMethod(HttpMethod.valueOf(httpInfo[2]));
+            requestBuilder.setHttpMethod(HttpMethod.valueOf(httpInfo[0])); // needs to be 0 index for HTTP method
             requestBuilder.setUri(new URI(httpInfo[1]));
             return Optional.of(addRequestHeaders(message, requestBuilder));
         } catch(URISyntaxException | IllegalArgumentException e) {
