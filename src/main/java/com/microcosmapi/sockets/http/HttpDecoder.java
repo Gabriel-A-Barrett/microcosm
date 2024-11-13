@@ -1,8 +1,8 @@
-package Sockets.http;
+package sockets.http;
 
-import Sockets.contract.HttpMethod;
-import Sockets.pojos.HttpRequest;
-import Sockets.pojos.HttpRequest.Builder;
+import sockets.contract.HttpMethod;
+import sockets.pojos.HttpRequest;
+import sockets.pojos.HttpRequest.Builder;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;

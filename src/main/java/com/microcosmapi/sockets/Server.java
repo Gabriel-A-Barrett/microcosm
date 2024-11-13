@@ -1,8 +1,8 @@
-package microcosmapi;
+package sockets;
 
-import microcosmapi.contract.HttpMethod;
-import microcosmapi.contract.RequestRunner;
-import microcosmapi.http.HttpHandler;
+import Sockets.contract.HttpMethod;
+import Sockets.contract.RequestRunner;
+import Sockets.http.HttpHandler;
 
 import java.io.IOException;
 import java.net.ServerSocket;

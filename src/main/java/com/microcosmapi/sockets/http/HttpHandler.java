@@ -1,9 +1,9 @@
-package Sockets.http;
+package sockets.http;
 
-import Sockets.contract.RequestRunner;
-import Sockets.pojos.HttpRequest;
-import Sockets.pojos.HttpResponse;
-import Sockets.writers.ResponseWriter;
+import sockets.contract.RequestRunner;
+import sockets.pojos.HttpRequest;
+import sockets.pojos.HttpResponse;
+import sockets.writers.ResponseWriter;
 
 import java.io.*;
 import java.util.Map;
