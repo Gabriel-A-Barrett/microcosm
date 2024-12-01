@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body, h1,h2 {
+    font-family: "Montserrat", sans-serif
+}
+
+button, input, textarea, .w3-button {
+    background-color: #222;
+    color: #fff;
+}
+
+.w3-row-padding img {
+    margin-bottom: 12px
+}
+
+.w3-sidebar {
+    width: 120px;
+    background: #222;
+}
+
+#main {
+    margin-left: 120px
+}
+
+#overlay {
+    z-index:4;
+}
+
+@media only screen and (max-width: 600px) {
+    #main {margin-left: 0}
+  }
+
