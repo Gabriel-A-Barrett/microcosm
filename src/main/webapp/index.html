@@ -3,56 +3,59 @@
 <head>
     <title>Terra</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="css/site.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
-    <script src="js/functions.js" type="text/javascript"></script>
-    <style media="all" id="fa-v4-font-face">/*!
-        * Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com
-        * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
-        * Copyright 2024 Fonticons, Inc.
-        */@font-face{font-family:"FontAwesome";font-display:block;src:url(https://ka-f.fontawesome.com/releases/v6.7.1/webfonts/free-fa-solid-900.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v6.7.1/webfonts/free-fa-solid-900.ttf) format("truetype")}@font-face{font-family:"FontAwesome";font-display:block;src:url(https://ka-f.fontawesome.com/releases/v6.7.1/webfonts/free-fa-brands-400.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v6.7.1/webfonts/free-fa-brands-400.ttf) format("truetype")}@font-face{font-family:"FontAwesome";font-display:block;src:url(https://ka-f.fontawesome.com/releases/v6.7.1/webfonts/free-fa-regular-400.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v6.7.1/webfonts/free-fa-regular-400.ttf) format("truetype");unicode-range:u+f003,u+f006,u+f014,u+f016-f017,u+f01a-f01b,u+f01d,u+f022,u+f03e,u+f044,u+f046,u+f05c-f05d,u+f06e,u+f070,u+f087-f088,u+f08a,u+f094,u+f096-f097,u+f09d,u+f0a0,u+f0a2,u+f0a4-f0a7,u+f0c5,u+f0c7,u+f0e5-f0e6,u+f0eb,u+f0f6-f0f8,u+f10c,u+f114-f115,u+f118-f11a,u+f11c-f11d,u+f133,u+f147,u+f14e,u+f150-f152,u+f185-f186,u+f18e,u+f190-f192,u+f196,u+f1c1-f1c9,u+f1d9,u+f1db,u+f1e3,u+f1ea,u+f1f7,u+f1f9,u+f20a,u+f247-f248,u+f24a,u+f24d,u+f255-f25b,u+f25d,u+f271-f274,u+f278,u+f27b,u+f28c,u+f28e,u+f29c,u+f2b5,u+f2b7,u+f2ba,u+f2bc,u+f2be,u+f2c0-f2c1,u+f2c3,u+f2d0,u+f2d2,u+f2d4,u+f2dc}@font-face{font-family:"FontAwesome";font-display:block;src:url(https://ka-f.fontawesome.com/releases/v6.7.1/webfonts/free-fa-v4compatibility.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v6.7.1/webfonts/free-fa-v4compatibility.ttf) format("truetype");unicode-range:u+f041,u+f047,u+f065-f066,u+f07d-f07e,u+f080,u+f08b,u+f08e,u+f090,u+f09a,u+f0ac,u+f0ae,u+f0b2,u+f0d0,u+f0d6,u+f0e4,u+f0ec,u+f10a-f10b,u+f123,u+f13e,u+f148-f149,u+f14c,u+f156,u+f15e,u+f160-f161,u+f163,u+f175-f178,u+f195,u+f1f8,u+f219,u+f27a}</style>
-    <style media="all" id="fa-v5-font-face">/*!
-        * Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com
-        * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
-        * Copyright 2024 Fonticons, Inc.
-        */@font-face{font-family:"Font Awesome 5 Brands";font-display:block;font-weight:400;src:url(https://ka-f.fontawesome.com/releases/v6.7.1/webfonts/free-fa-brands-400.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v6.7.1/webfonts/free-fa-brands-400.ttf) format("truetype")}@font-face{font-family:"Font Awesome 5 Free";font-display:block;font-weight:900;src:url(https://ka-f.fontawesome.com/releases/v6.7.1/webfonts/free-fa-solid-900.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v6.7.1/webfonts/free-fa-solid-900.ttf) format("truetype")}@font-face{font-family:"Font Awesome 5 Free";font-display:block;font-weight:400;src:url(https://ka-f.fontawesome.com/releases/v6.7.1/webfonts/free-fa-regular-400.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v6.7.1/webfonts/free-fa-regular-400.ttf) format("truetype")}</style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
 </head>
 <body class="w3-black">
     <!-- Menus -->
-    <div id="menu-center">
-        <!-- Icon Bar (Sidebar - hidden on small screens) -->
-        <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" id="sidebar" style="display: block;">
-            <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-                <i class="fa-solid fa-microscope w3-xxlarge" aria-hidden="true"></i>
-                <p style="margin-bottom:0;">ABOUT</p>
-            </a>
-        </nav>
-        <!-- Icon on small screen -->
-        <header class="w3-bar w3-top w3-hide-large w3-hide-medium w3-xxlarge">
-            ::before
-            <div class="w3-bar-item w3-button w3-black w3-round-large w3-left" onclick="menu_open()">
-                <i class="fa fa-bars" aria-hidden="true">
-                    ::before
-                </i>
-            </div>
-            ::after
-        </header>
-        <!-- Overlay effect when opening menu on side-bars -->
-        <div class="w3-overlay w3-hide-large w3-hide-medium" onclick="menu_close()" style="curse: pointer; display: block;" title="close side menu" id="overlay">
-            <nav class="w3-sidebar w3-bar-black w3-medium w3-center" style="width:200px">
-                <span onclick="toggle('sidebar');" class="w3-button w3-large w3-display-topright w3-round-large">x</span>
-                <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-                    <p>
-                        <i class="fa-solid fa-microscope" aria-hidden="true">::before</i>
-                    " ABOUT "
-                    </p>
+    <nav class="sidebar">
+        <div class="sidebar-top-wrapper">
+            <div class="sidebar-top">
+                <a href="#" class="logo__wrapper">
+                    <img src="assets/terra.svg" alt="Logo" class="logo-small">
+                    <span class="hide">
+                        Terra
+                    </span>
                 </a>
-            </nav>
+            </div>
+            <div class="expand-btn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.00979 2.72L10.3565 7.06667C10.8698 7.58 10.8698 8.42 10.3565 8.93333L6.00979 13.28"
+                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
         </div>
-    </div>
+        <div class="search__wrapper">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9 9L13 13M5.66667 10.3333C3.08934 10.3333 1 8.244 1 5.66667C1 3.08934 3.08934 1 5.66667 1C8.244 1 10.3333 3.08934 10.3333 5.66667C10.3333 8.244 8.244 10.3333 5.66667 10.3333Z"
+                stroke="#697089" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <input type="search" placeholder="Search for anything...">
+        </div>
+        <div class="sidebar-links">
+            <h2>About</h2>
+            <ul>
+                <li>
+                    <a href="#dashboard" title="Dashboard" class="tooltip">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-layout-dashboard" width="24"
+                          height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                          stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M4 4h6v8h-6z" />
+                          <path d="M4 16h6v4h-6z" />
+                          <path d="M14 12h6v8h-6z" />
+                          <path d="M14 4h6v4h-6z" />
+                        </svg>
+                        <span class="link hide">Dashboard</span>
+                        <span class="tooltip__content">Dashboard</span>
+                      </a>
+                </li>
+            </ul>
+    </nav>
+    <script src="js/functions.js" type="text/javascript"></script>
     <!-- Page Content -->
     <div class="w3-padding-large" id="main">
         <h1>Temperature Data</h1>
@@ -63,5 +66,7 @@
             });
         </script>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
 </body>
 </html>

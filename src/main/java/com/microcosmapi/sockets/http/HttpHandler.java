@@ -56,5 +56,4 @@ public class HttpHandler {
             ResponseWriter.writeResponse(bufferedWriter, new HttpResponse.Builder().setStatusCode(404).setEntity("Route Not Found...").build());
         }
     } 
-
 }

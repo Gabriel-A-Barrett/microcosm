@@ -1,0 +1,12 @@
+{
+  "name": "frontend-app",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm run build"
+  },
+  "dependencies": {
+    "chartjs-adapter-date-fns": "^3.0.0",
+    "webpack": "^v5.88.2",
+    "webpack-cli": "^v5.1.4"
+  }
+}

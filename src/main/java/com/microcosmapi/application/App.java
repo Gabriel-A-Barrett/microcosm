@@ -39,12 +39,12 @@ public class App {
                         .build());
 
         // Serve css file 
-        myServer.addRoute(GET, "css/site.css",
+        myServer.addRoute(GET, "css/style.css",
                 (req) -> new HttpResponse.Builder()
-                    .setStatusCode(200)
-                    .addHeader("Content-Type", "test/css")
-                    .setEntity(loadStaticFile("site.css"))
-                    .build());
+                        .setStatusCode(200)
+                        .addHeader("Content-Type", "text/css")
+                        .setEntity(loadStaticFile("css/style.css"))
+                        .build());
 
         // Route for serving temperature data as JSON
         myServer.addRoute(GET, "/api/temperature-data",

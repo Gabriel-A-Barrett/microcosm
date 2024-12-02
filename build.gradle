@@ -1,7 +1,36 @@
 plugins {
     id 'application'
+    id "com.github.node-gradle.node" version "7.1.0"
 }
 
 application {
-    mainClassName = 'application.App' // Replace with the actual fully-qualified name of your main class
+    mainClassName = 'application.App' //class name with main
 }
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.11.0'
+    implementation 'org.slf4j:slf4j-api:2.0.16'
+    implementation 'org.slf4j:slf4j-simple:2.0.16'
+    implementation 'com.pi4j:pi4j-core:2.7.0'
+    implementation 'com.pi4j:pi4j-plugin-raspberrypi:2.7.0'
+    implementation 'com.pi4j:pi4j-plugin-gpiod:2.7.0'
+    implementation 'com.pi4j:pi4j-device:1.3'
+    implementation 'com.pi4j:pi4j-plugin-pigpio:2.7.0'
+}
+
+node {
+    version = '18.0.0'
+    npmVersion = '9.0.0'
+    download = true 
+}
+
+task buildFrontend(type: Exec) {
+    workingDir = file('src/main/webapp')
+    commandLine 'npm', 'run', 'build'
+}
+
+build.dependsOn buildFrontend
