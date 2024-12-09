@@ -28,9 +28,9 @@ node {
     download = true 
 }
 
-task buildFrontend(type: Exec) {
+/*task buildFrontend(type: Exec) {
     workingDir = file('src/main/webapp')
     commandLine 'npm', 'run', 'build'
 }
 
-build.dependsOn buildFrontend
+build.dependsOn buildFrontend*/

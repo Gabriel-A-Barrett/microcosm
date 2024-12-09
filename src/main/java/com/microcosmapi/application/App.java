@@ -38,8 +38,8 @@ public class App {
                         .setEntity(loadStaticFile("js/functions.js"))
                         .build());
 
-        // Serve css file 
-        myServer.addRoute(GET, "css/style.css",
+        // Serve CSS file
+        myServer.addRoute(GET, "/css/style.css", // Added the leading slash or else Route not found
                 (req) -> new HttpResponse.Builder()
                         .setStatusCode(200)
                         .addHeader("Content-Type", "text/css")
