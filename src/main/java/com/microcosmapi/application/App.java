@@ -23,7 +23,8 @@ public class App {
         // Initialize the TemperatureHandler
         TemperatureHandler temperatureHandler = new TemperatureHandler();
 
-        myServer.addRoute(GET, "/microcosm",
+        // Home Page
+        myServer.addRoute(GET, "/",
                 (req) -> new HttpResponse.Builder()
                         .setStatusCode(200)
                         .addHeader("Content-Type", "text/html")
@@ -47,13 +48,13 @@ public class App {
                         .build());
 
         // Route for serving temperature data as JSON
-        myServer.addRoute(GET, "/api/temperature-data",
+        /*myServer.addRoute(GET, "/api/temperature-data",
                 (req) -> new HttpResponse.Builder()
                     .setStatusCode(200)
                     .addHeader("Access-Control-Allow-Origin", "*")
                     .setEntity(temperatureHandler.getTemperatureData()) // sends temperature json data
                     .build());
-
+        */
         myServer.start();
     }
 

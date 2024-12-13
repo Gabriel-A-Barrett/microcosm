@@ -2,17 +2,18 @@
 
 /* side bar styling */
 :root {
-  font-size: 16px;
-  font-family: 'Open Sans';
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
+  --bg-addition: #206700db;
+  --bg-deletion: #fa3434d6;
   --transition-speed: 600ms;
 }
 
 body {
-  color: black;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--bg-primary);
   background-color: white;
   margin: 0;
   padding: 0;
@@ -104,11 +105,11 @@ main {
 }
 
 .fa-primary {
-  color: #ff7eee;
+  color: #76a3d6;
 }
 
 .fa-secondary {
-  color: #df49a6;
+  color: #76a3d6;
 }
 
 .fa-primary,
@@ -147,10 +148,155 @@ main {
   transform: rotate(-180deg);
 }
 
+/* Button styling */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease;
+}
+
+.btn-primary {
+  color: var(--text-secondary);
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.btn-addition {
+  background-color: var(--bg-addition);
+  min-width: 3rem;
+  border-radius: 12px;
+  padding: 12px 28px;
+  color: var(--text-secondary);
+}
+
+.btn-addition:hover {
+  filter:brightness(110%)
+}
+
+.btn-addition svg {
+  margin-right: 0.5rem;
+}
+
+/* Hover effect to darken the button */
+.btn:active {
+  filter: brightness(85%); /* Reduce brightness to darken */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.btn-close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn-close:hover,
+.btn-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.inventory-form {
+  display: grid;
+  gap: 10px;
+}
+
+.form-group {
+  display: grid;
+  gap: 5px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Table */
+.container {
+  margin-left: 5rem;
+  padding: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 98vw;
+  margin: 20px auto;
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+caption {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--bg-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.3ch;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--text-primary);
+}
+
+th {
+  background-color: var(--bg-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1ch;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.5)
+}
+
 /* Small screens 
  * Media query lets you target certain screen sizes and orientations
 */
-
 @media only screen and (max-width: 600px) {
   .navbar {
     width: 100vw; /* Full width */
@@ -200,39 +346,4 @@ main {
   .navbar:hover .logo svg {
     margin-left: 10rem;
   }
-}
-
-/* Button styling */
-.btn {
-  border-radius: 0%;
-  font-size: 1rem;
-}
-
-.btn-primary {
-  background-color: #add8e6; /* Light blue background */
-  cursor: pointer; /* Pointer cursor on hover */
-}
-
-/* Hover effect to darken the button */
-.btn:active {
-  filter: brightness(85%); /* Reduce brightness to darken */
-}
-
-/* Table */
-.table tr, .table td{
-  width: 90vw;
-  margin: 1rem 0;
-  padding: 0.5rem 0.5rem;
-  text-align: center;
-}
-
-/* Style the header of the table */
-.table thead th {
-  background-color: #007BFF;
-  color: white;
-  border-bottom: 1rem sold #ddd;
-}
-
-.table tbody tr {
-  border-bottom: 1rem solid #ddd;
 }
