@@ -2,11 +2,18 @@
 document.addEventListener('DOMContentLoaded', () => {
     const button = document.querySelector('#openModalBtn');
     const modal = document.getElementById('userForm'); /* Need to look up css element */
+    const close = document.getElementById('closeModalBtn')
     if (button) {
         button.addEventListener('click', () => {
             console.log('Button to open modal clicked!');
             modal.style.display = 'block'
         });
+
+        close.addEventListener('click', () => {
+            console.log("Close modal form");
+            modal.style.display = 'none'
+        });
+
     } else {
         console.error('Element #openModalBtn not found!');
     }

@@ -252,6 +252,10 @@ input, select {
   border-radius: 4px;
 }
 
+.submitBtn {
+  color: black;
+}
+
 /* Table */
 .container {
   margin-left: 5rem;
